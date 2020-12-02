@@ -1,5 +1,8 @@
 # Change Log
 
+## [1.4.3]
+- 添加import 同一个类多个成员时候的排序
+
 ## [1.4.1]
 - Fix previous change by adding contribution points to package.json
 

@@ -34,8 +34,8 @@ export function shouldSortOnSave(): boolean {
     return getExtensionConfig().get('sortOnSave') as boolean;
 }
 
-export function getMembersSort(): string {
-    return getExtensionConfig().get('membersSort') as string;
+export function getSortMembers(): string {
+    return getExtensionConfig().get('sortMembers') as string;
 }
 
 export function getPathSortOrdering(): string[] {

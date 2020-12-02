@@ -38,10 +38,10 @@ function getPath(importClause: TypescriptImport): string {
 
 function generatedNamedImportGroup(namedImports: NamedImport[]): string {
     let generatedNamedImports = namedImports.map(generateNamedImport);
-    let memberSort = options.getMembersSort()
-    if (memberSort === 'asc'){
+    let sortMembers = options.getSortMembers()
+    if (sortMembers === 'asc'){
         generatedNamedImports.sort()
-    } else if (memberSort === 'desc'){
+    } else if (sortMembers === 'desc'){
         generatedNamedImports.sort().reverse()
     }
     let maxImportsPerSingleLine = options.getMaxNamedImportsPerSingleLine();
