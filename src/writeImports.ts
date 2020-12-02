@@ -38,6 +38,12 @@ function getPath(importClause: TypescriptImport): string {
 
 function generatedNamedImportGroup(namedImports: NamedImport[]): string {
     let generatedNamedImports = namedImports.map(generateNamedImport);
+    let memberSort = options.getMembersSort()
+    if (memberSort === 'asc'){
+        generatedNamedImports.sort()
+    } else if (memberSort === 'desc'){
+        generatedNamedImports.sort().reverse()
+    }
     let maxImportsPerSingleLine = options.getMaxNamedImportsPerSingleLine();
     if (generatedNamedImports.length > maxImportsPerSingleLine) {
         let newline = `\n${options.getTabString()}`;
